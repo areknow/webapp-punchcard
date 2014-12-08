@@ -1,5 +1,6 @@
 var liveTime = '';
 var realDate = '';
+var mainMenuOpen = false;
 
 jQuery(document).ready(function() {
 
@@ -32,23 +33,31 @@ jQuery(document).ready(function() {
     $( "#mobile-button" ).click(function() {
         $( "#mobile-nav" ).slideToggle( "fast");
     });
+    $("#btn-main-menu").click(function () {
+        var effect = 'slide';
+        var options = { direction: 'right' };
+        var duration = 200;
+        $('.hidden-menu').toggle(effect, options, duration);
+    });
 });
+
+function openMainMenu() {
+}
 
 // get the time and day and push to live objects
 function startTime() {
     var today=new Date();
-    var h=today.getHours();
-    var m=today.getMinutes();
-    var s=today.getSeconds();
-    var day=today.getDate();
-    var month=today.getMonth();
-    var year=today.getFullYear().toString().substr(2,2);
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var day = ('0' + today.getDate()).slice(-2)
+    var month = ('0' + (today.getMonth()+1)).slice(-2)
+    var year = today.getFullYear().toString().substr(2,2);
     m = checkTime(m);
     s = checkTime(s);
-    var ampm = (h >= 12) ? h-12+":"+m+":"+s+" PM" : h+":"+m+":"+s+" AM";
-    document.getElementById('liveTime').innerHTML = ampm;
+    document.getElementById('liveTime').innerHTML = prettyTime(h,m,s);
     liveTime = h+":"+m+":"+s;
-    realDate = month+1+"."+day+"."+year;
+    realDate = month+"."+day+"."+year;
     var t = setTimeout(function(){startTime()},500);
 }
 
@@ -66,6 +75,23 @@ function getDay() {
 
     var n = weekday[d.getDay()];
     document.getElementById("liveDay").innerHTML = n;
+}
+
+// make the time look nice
+function prettyTime(h,m,s) {
+    var ampm ='';
+    if (h >= 12) {
+        if (h <= 12) {
+            ampm = h+":"+m+":"+s+" PM";
+        }
+        else if (h > 12) {
+            ampm = h-12+":"+m+":"+s+" PM";
+        }
+    }
+    else {
+        ampm = h+":"+m+":"+s+" AM";
+    }
+    return ampm;
 }
 
 // check time for accuracy

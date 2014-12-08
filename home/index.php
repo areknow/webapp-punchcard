@@ -26,48 +26,33 @@ else if (isset($punchStatus)) {
         $isDisabled = array("", "disabled");
     }
 }
+$query = "SELECT * FROM `users` WHERE id=$userid";
+$result = mysql_query($query);
+$row = mysql_fetch_array($result);
+//$GLOBALS['fullname'] = $row['first']." ".$row['last'];
+$_SESSION['fullname'] = $row['first']." ".$row['last'];
 ?>
 <html class="home-bg">
     <head>
         <title>PunchCard - Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-        <link rel="stylesheet" href="../css/style.css" type="text/css">
         <link rel="stylesheet" href="../css/buttons.css" type="text/css">
+        <link rel="stylesheet" href="../css/animate.css" type="text/css">
+        <link rel="stylesheet" href="../css/style.css" type="text/css">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>
         <link href="../skdslider/skdslider.css" rel="stylesheet">
         <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="../src/jquery-ui.min.js"></script>
         <script src="../skdslider/skdslider.js"></script>
         <script src="../src/toword.js"></script>
         <script src="../src/init.js"></script>
     </head>
     <body>
-        <div id="mobile-nav">
-            <div class="row">Home</div>
-            <div class="row">About</div>
-            <div class="row">Help</div>
-            <div class="row" onclick="location.href='../php/logout.php';">Logout</div>
-        </div>
-        
-        <div id="nav">
-            <div class="block left nohover">
-                PunchCard
-            </div>
-            <div class="right">
-                <div class="block">
-                    About
-                </div>
-                <div class="block">
-                    Help
-                </div>
-                <div class="block" onclick="location.href='../php/logout.php';">
-                    Logout
-                </div>
-                
-            </div>
-        </div>
+        <?PHP include '../php/navigation.php' ?>
         <div id="content">
             <div class="skdslider">
                 <div id="mobile-button">
@@ -116,6 +101,8 @@ else if (isset($punchStatus)) {
         <div id="footer">
             &copy; 2014 - Arnaud Crowther, Amanda Labelle, Eric Maul, Alex Osbourn
         </div>
+        
+        <!-- hidden objects -->
         <div class="modal" id="modal-in">
             <div class="popup">
                 <div class="dismiss" id="x-in"><i class="fa fa-times"></i></div>
@@ -138,7 +125,12 @@ else if (isset($punchStatus)) {
             <div class="popup print">
                 <div class="dismiss" id="x-print"><i class="fa fa-times"></i></div>
                 <div class="inner print-inner">
-                    <div class="success clickme" onclick="$('#report-table').printElement();"><i class="fa fa-print"></i> Report</div>
+                    <div class="success clickme margin-right" onclick="$('#report-table').printElement();">
+                        <i class="fa fa-print"></i> Print
+                    </div>
+                    <div class="success clickme" onclick="$('#report-table').printElement();">
+                        <i class="fa fa-envelope"></i> Email
+                    </div>
                     <div class="print-cont">
                         <div class="text"><?PHP include '../php/report.php'; ?></div>
                     </div>

@@ -6,11 +6,18 @@
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/clock.css" type="text/css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="src/clock.js"></script>
     </head>
     <body class="login-bg">
-        
-        
+        <div id="clock_base">
+            <div id="ss" class="c_part"></div>
+            <div id="mm" class="c_part"></div>
+            <div id="hh" class="c_part"></div>	
+            <div id="center"></div>
+        </div>
         <div id="login">
             <?PHP
             session_start();
@@ -27,7 +34,7 @@
                     <div class="fa-input"><i class="fa fa-user"></i></div>
                 </div>
                 <div class="input-cont">
-                    <input name="password" type="text" placeholder="Password">
+                    <input name="password" type="password" placeholder="Password">
                     <div class="fa-input"><i class="fa fa-lock"></i></div>
                 </div>
                 <button name="login" class="pure-button pure-button-primary" type="submit">Login</button>
