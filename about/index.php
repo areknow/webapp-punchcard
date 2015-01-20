@@ -1,4 +1,10 @@
-<?PHP session_start(); ?>
+<?PHP session_start(); 
+session_start();
+if(!$_SESSION['logged']) { 
+    header("Location: ../"); 
+    exit;
+}
+?>
 <!doctype html>
 <html class="home-bg">
     <head>
@@ -25,32 +31,28 @@
                     <i class="fa fa-bars fa-2x"></i>
                 </div>
                 <div class="slider-shadow"></div>
+                <div class="header"><br><br>
+                    <h1>PunchCard</h1>
+                    <p>The automated timesheet management system</p>
+                </div>
                 <ul id="slider" class="slides">
                     <li>
-                        <img src="../res/slide1.jpg" />
-                        <div class="header">
-                            <h1>PunchCard</h1>
-                            <p>The automated timesheet management system</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../res/slide2.jpg" />
-                        <div class="header">
-                            <h1>PunchCard</h1>
-                            <p>The automated timesheet management system</p>
-                        </div>
-                    </li>
-                    <li>
                         <img src="../res/slide3.jpg" />
+                    </li>
+                    <li>
+                        <img src="../res/slide4.jpg" />
                         <div class="header">
-                            <h1>PunchCard</h1>
-                            <p>The automated timesheet management system</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../res/slide5.jpg" />
+                        <div class="header">
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="section about">
-                <h1>About PunchCard</h1>
+                <h1>About</h1>
                 <hr>
                 <p>
                     <h3>History</h3>
@@ -58,18 +60,20 @@
                 </p>
                 <p>
                     <h3>Motivation</h3>
-                    They chose to tackle this problem as our Sophomore Project out of frustration and desire for something better. We aim to bring Oakland University's lesser thought-of systems into the 21st Century and away from a deficient handwritten tracking system.
+                    They chose to tackle this problem as their Sophomore Project out of frustration and desire for something better. By providing a better, more streamlined method for tracking time and hours worked, the application will help reduce errors, account for missed time, and provide a more fair and accurate system. They aim to bring Oakland University's lesser thought-of processes into the 21st Century and away from a deficient handwritten time-card system.
                 </p>
                 <p>
                     <h3>Goals</h3>
                     The team had the following goals in mind when developing this application:
                     <ul>
-                        <li>Item 1</li>
-                        <li>Another Item</li>
-                        <li>Look at this longer item</li>
-                        <li>This could be an item</li>
+                        <li>Adopt a paperless system</li>
+                        <li>Establish a worry-free way to track time</li>
+                        <li>Prevent simple errors</li>
+                        <li>Take the timesheet process into the digital age</li>
+                        <li>Presented all in a simple, uncluttered style</li>
                     </ul>
                 </p>
+                <h2 class="conclusion">The end result is a great tool for tracking hours for employees with fluctuating shifts.</h2>
             </div>
         </div>
         <div id="footer">

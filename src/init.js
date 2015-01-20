@@ -8,8 +8,8 @@ jQuery(document).ready(function() {
     getDay();
 
     jQuery('#slider').skdslider( {
-        delay:5000, 
-        animationSpeed: 5000,
+        delay:100, 
+        animationSpeed: 10000,
         showNextPrev:false,
         showNav:false,
         showPlayButton:false,
@@ -131,4 +131,10 @@ function reloadPage() {
     var t = setTimeout(function(){
         location.reload();
     },500);
+}
+
+// new tab
+function OpenInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
 }

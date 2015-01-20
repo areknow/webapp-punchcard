@@ -29,10 +29,9 @@ else if (isset($punchStatus)) {
 $query = "SELECT * FROM `users` WHERE id=$userid";
 $result = mysql_query($query);
 $row = mysql_fetch_array($result);
-//$GLOBALS['fullname'] = $row['first']." ".$row['last'];
 $_SESSION['fullname'] = $row['first']." ".$row['last'];
 ?>
-<html class="home-bg">
+<html>
     <head>
         <title>PunchCard - Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,7 +50,7 @@ $_SESSION['fullname'] = $row['first']." ".$row['last'];
         <script src="../src/toword.js"></script>
         <script src="../src/init.js"></script>
     </head>
-    <body>
+    <body class="home-bg">
         <?PHP include '../php/navigation.php' ?>
         <div id="content">
             <div class="skdslider">
@@ -59,26 +58,22 @@ $_SESSION['fullname'] = $row['first']." ".$row['last'];
                     <i class="fa fa-bars fa-2x"></i>
                 </div>
                 <div class="slider-shadow"></div>
+                <div class="header"><br><br>
+                    <h1>PunchCard</h1>
+                    <p>The automated timesheet management system</p>
+                </div>
                 <ul id="slider" class="slides">
                     <li>
-                        <img src="../res/slide1.jpg" />
-                        <div class="header">
-                            <h1>PunchCard</h1>
-                            <p>The automated timesheet management system</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../res/slide2.jpg" />
-                        <div class="header">
-                            <h1>PunchCard</h1>
-                            <p>The automated timesheet management system</p>
-                        </div>
-                    </li>
-                    <li>
                         <img src="../res/slide3.jpg" />
+                    </li>
+                    <li>
+                        <img src="../res/slide4.jpg" />
                         <div class="header">
-                            <h1>PunchCard</h1>
-                            <p>The automated timesheet management system</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../res/slide5.jpg" />
+                        <div class="header">
                         </div>
                     </li>
                 </ul>
@@ -125,10 +120,10 @@ $_SESSION['fullname'] = $row['first']." ".$row['last'];
             <div class="popup print">
                 <div class="dismiss" id="x-print"><i class="fa fa-times"></i></div>
                 <div class="inner print-inner">
-                    <div class="success clickme margin-right" onclick="$('#report-table').printElement();">
+                    <div class="marg-right success clickme margin-right" onclick="OpenInNewTab('../print');">
                         <i class="fa fa-print"></i> Print
                     </div>
-                    <div class="success clickme" onclick="$('#report-table').printElement();">
+                    <div class="success clickme" onclick="alert('Timesheet sent to <?PHP echo $row['supervisor'];?>')">
                         <i class="fa fa-envelope"></i> Email
                     </div>
                     <div class="print-cont">

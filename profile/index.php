@@ -1,4 +1,41 @@
-<?PHP session_start(); ?>
+<?PHP 
+include '../php/connect.php';
+
+session_start(); 
+if(!$_SESSION['logged']) { 
+    header("Location: ../"); 
+    exit;
+}
+
+$userid = $_SESSION['id'];
+$queryProfile = "SELECT * FROM `users` WHERE id=$userid";
+$resultProfile = mysql_query($queryProfile);
+$rowProfile = mysql_fetch_array($resultProfile);
+
+if (isset($_POST['submit-profile'])) {
+    $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+    
+    $first = $_POST['First'];
+    $last = $_POST['Last'];
+    $gid = $_POST['GID'];
+    $super = $_POST['Super'];
+    $type = $_POST['Type'];
+    
+    $sql= "UPDATE `users` SET 
+    `first` = '$first',
+    `last` = '$last',
+    `gid` = '$gid',
+    `supervisor` = '$super',
+    `type` = '$type'
+    WHERE `id` = $userid ";
+    
+    if (!mysql_query($sql, $db)) {
+        die('Error: ' . mysql_error());
+    }
+    header('Location: ../profile');
+    exit;
+}
+?>
 <!doctype html>
 <html class="home-bg">
     <head>
@@ -25,26 +62,22 @@
                     <i class="fa fa-bars fa-2x"></i>
                 </div>
                 <div class="slider-shadow"></div>
+                <div class="header"><br><br>
+                    <h1>PunchCard</h1>
+                    <p>The automated timesheet management system</p>
+                </div>
                 <ul id="slider" class="slides">
                     <li>
-                        <img src="../res/slide1.jpg" />
-                        <div class="header">
-                            <h1>PunchCard</h1>
-                            <p>The automated timesheet management system</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../res/slide2.jpg" />
-                        <div class="header">
-                            <h1>PunchCard</h1>
-                            <p>The automated timesheet management system</p>
-                        </div>
-                    </li>
-                    <li>
                         <img src="../res/slide3.jpg" />
+                    </li>
+                    <li>
+                        <img src="../res/slide4.jpg" />
                         <div class="header">
-                            <h1>PunchCard</h1>
-                            <p>The automated timesheet management system</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../res/slide5.jpg" />
+                        <div class="header">
                         </div>
                     </li>
                 </ul>
@@ -52,6 +85,35 @@
             <div class="section profile">
                 <h1>Profile</h1>
                 <hr>
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col col30">First name</div>
+                        <div class="col col70"><div class="row"><input name="First" type="text" value="<?PHP echo $rowProfile['first']; ?>"></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col30">Last name</div>
+                        <div class="col col70"><div class="row"><input name="Last" type="text" value="<?PHP echo $rowProfile['last']; ?>"></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col30">Grizzly ID Number</div>
+                        <div class="col col70"><div class="row"><input name="GID" type="text" value="<?PHP echo $rowProfile['gid']; ?>"></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col30">Email Address</div>
+                        <div class="col col70"><div class="row"><input name="Email" disabled type="text" value="<?PHP echo $rowProfile['email']; ?>"></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col30">Supervisor Email</div>
+                        <div class="col col70"><div class="row"><input name="Super" type="text" value="<?PHP echo $rowProfile['supervisor']; ?>"></div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col30">Employee Type</div>
+                        <div class="col col70"><div class="row"><input name="Type" type="text" value="<?PHP echo $rowProfile['type']; ?>"></div></div>
+                    </div>
+                    <div class="row">
+                        <button type="submit" name="submit-profile">Save</button>
+                    </div>
+                </form>
             </div>
         </div>
         <div id="footer">

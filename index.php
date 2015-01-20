@@ -19,6 +19,11 @@
             <div id="center"></div>
         </div>
         <div id="login">
+            <div id="login-title" class="nomobile">
+                <div class="header">
+                    <h1>PunchCard</h1>
+                </div>
+            </div>
             <?PHP
             session_start();
             if ($_SESSION['bad'] == TRUE) {
@@ -40,7 +45,7 @@
                 <button name="login" class="pure-button pure-button-primary" type="submit">Login</button>
                 <a href="">Forgot your password?</a>
             </form>
-            <div class="icon"><span class="icon-text">Welcome to<br><strong>PunchCard</strong></span></div>
+            <div class="icon"><span class="icon-text">Timesheet<br>Managment</span></div>
         </div>
         <div id="login-footer">
             &copy; 2014 - Arnaud Crowther, Amanda Labelle, Eric Maul, Alex Osbourn

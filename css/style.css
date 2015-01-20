@@ -1,764 +1,1016 @@
 @font-face {
-	font-family: 'digi';
-	src: url('http://cssdeck.com/uploads/resources/fonts/digii/DS-DIGII.TTF');
-}
+  font-family: 'digi';
+  src: url('http://cssdeck.com/uploads/resources/fonts/digii/DS-DIGII.TTF'); }
 
-
-
+/* line 12, /Applications/MAMP/htdocs/time/css/style.scss */
 html {
-    width:100%;
-    height:100%;
-    padding:0;
-    margin:0;
-    font-family: 'Raleway', sans-serif;
-    min-width: 750px;
-}
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  min-width: 750px; }
+
+/* line 20, /Applications/MAMP/htdocs/time/css/style.scss */
+.main-html {
+  height: 100%; }
+
+/* line 23, /Applications/MAMP/htdocs/time/css/style.scss */
 body {
-    width:100%;
-    height:100%;
-    padding:0;
-    margin:0;
-    position: relative;
-    overflow: auto;
-}
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: auto; }
+
+/* line 31, /Applications/MAMP/htdocs/time/css/style.scss */
 #login {
-    width:300px;
-    height:180px;
-    background:#edeef0;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align:center;
-    padding:10px;
-    border-radius:5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.22);
-}
-#login .icon { 
-    left: -130px;
-    top:-3px;
-    content: "";
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    pointer-events: none;
-    background-image:url(../res/icon.png);
-    background-size:contain;
-}
+  width: 300px;
+  height: 180px;
+  background: #edeef0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.22); }
+
+/* line 46, /Applications/MAMP/htdocs/time/css/style.scss */
+#login .icon {
+  left: -130px;
+  top: -3px;
+  content: "";
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  pointer-events: none;
+  background-image: url(../res/icon.png);
+  background-size: contain; }
+
+/* line 57, /Applications/MAMP/htdocs/time/css/style.scss */
 #login .icon-text {
-    position:absolute;
-    bottom:-42px;
-    left:10px;
-    width:100px;
-    text-align:left;
-    font-size:14px;
-    line-height:20px;
-    color:white;
-    font-weight:100;
-}
+  position: absolute;
+  bottom: -42px;
+  left: 10px;
+  width: 100px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+  font-weight: 100; }
+
+/* line 68, /Applications/MAMP/htdocs/time/css/style.scss */
 #login:after {
-    right: 100%;
-    top: 25%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(136, 183, 213, 0);
-    border-right-color: #edeef0;
-    border-width: 15px;
-    margin-top: -30px;
-}
-#login input, button{
-    margin:7px;
-    width:280px;
-    vertical-align:middle;
-    box-sizing: border-box;
-}
+  right: 100%;
+  top: 25%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: #edeef0;
+  border-width: 15px;
+  margin-top: -30px; }
+
+/* line 82, /Applications/MAMP/htdocs/time/css/style.scss */
+#login input, button {
+  margin: 7px;
+  width: 280px;
+  vertical-align: middle;
+  box-sizing: border-box; }
+
+/* line 88, /Applications/MAMP/htdocs/time/css/style.scss */
 #login button {
-    border-radius:4px;
-    font-size:13px;
-    line-height:30px;
-    box-sizing: border-box;
-}
+  border-radius: 4px;
+  font-size: 10px;
+  line-height: 30px;
+  box-sizing: border-box;
+  background: #298fa2;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px; }
+
+/* line 98, /Applications/MAMP/htdocs/time/css/style.scss */
 #login a {
-    font-size:10px;
-    color:#848484;
-    text-decoration:none;
-    line-height:28px;
-}
+  font-size: 10px;
+  color: #848484;
+  text-decoration: none;
+  line-height: 28px; }
+
+/* line 104, /Applications/MAMP/htdocs/time/css/style.scss */
 #login .input-cont {
-    position:relative;
-}
+  position: relative; }
+
+/* line 107, /Applications/MAMP/htdocs/time/css/style.scss */
 #login .fa-input {
-    position:absolute;
-    top:17px;
-    right:20px;
-    width:20px;
-    height:20px;
-    color:#d0d0d0;
-    pointer-events:none;
-}
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  color: #d0d0d0;
+  pointer-events: none; }
+
+/* line 116, /Applications/MAMP/htdocs/time/css/style.scss */
 #login .bad-login {
-    position: absolute;
-    top:-24px;
-    left:0;
-    right:0;
-    width:100px;
-    background: #be2424;
-    border-radius: 4px;
-    padding: 2px;
-    margin: auto;
-    font-size: 10px;
-    line-height: 15px;
-    color:#fff;
-    pointer-events: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.22);
-}
+  position: absolute;
+  top: -24px;
+  left: 0;
+  right: 0;
+  width: 100px;
+  background: #be2424;
+  border-radius: 4px;
+  padding: 2px;
+  margin: auto;
+  font-size: 10px;
+  line-height: 15px;
+  color: #fff;
+  pointer-events: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.22); }
+
+/* line 132, /Applications/MAMP/htdocs/time/css/style.scss */
+#login-title {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.49);
+  position: absolute;
+  top: -120px;
+  left: -3px;
+  z-index: 3;
+  font-size: 24px; }
+
+/* line 143, /Applications/MAMP/htdocs/time/css/style.scss */
 #nav {
-    position: fixed;
-    width:100%;
-    height: 50px;
-    background:#1ba085;
-/*    overflow: hidden;*/
-    color: #fff;
-    font-weight: bold;
-    z-index: 3;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.31);
-    border-collapse: collapse;
-}
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background: #298fa2;
+  /*    overflow: hidden;*/
+  color: #fff;
+  font-weight: bold;
+  z-index: 3;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.31);
+  border-collapse: collapse; }
+
+/* line 155, /Applications/MAMP/htdocs/time/css/style.scss */
 #nav .fa-circle-o-notch {
-    margin-right: 10px;
-    width: 20px;
-    text-align: center;
-}
+  margin-right: 10px;
+  width: 20px;
+  text-align: center; }
+
+/* line 160, /Applications/MAMP/htdocs/time/css/style.scss */
 #nav .block {
-    display: inline-block;
-    height: 100%;
-    line-height: 50px;
-    padding: 0 20px;
-    cursor: pointer;
-}
+  display: inline-block;
+  height: 100%;
+  line-height: 50px;
+  padding: 0 20px;
+  cursor: pointer; }
+
+/* line 167, /Applications/MAMP/htdocs/time/css/style.scss */
 #nav #btn-main-menu i {
-    margin-left: 20px;
-}
+  margin-left: 20px; }
+
+/* line 170, /Applications/MAMP/htdocs/time/css/style.scss */
 #nav #btn-main-menu:hover i {
-    color: #626262;
-}
+  color: #626262; }
+
+/* line 173, /Applications/MAMP/htdocs/time/css/style.scss */
 .hidden-menu {
-    color:#d3d3d3;
-    position: absolute;
-    background: #4e4e4e;
-    top: 52px;
-    z-index: 100;
-    right: 0;
-    height: 298px;
-    z-index: 9999;
-    border-left: 2px solid #464646;
-    opacity: .9;
-    display: none;
-}
+  color: #d3d3d3;
+  position: absolute;
+  background: #4e4e4e;
+  top: 52px;
+  z-index: 100;
+  right: 0;
+  height: 298px;
+  z-index: 999999;
+  border-left: 2px solid #464646;
+  opacity: 0.9;
+  display: none; }
+
+/* line 186, /Applications/MAMP/htdocs/time/css/style.scss */
 .hidden-menu .rowa {
-    padding: 22px 35px 22px 30px;
-    border-bottom: 1px solid #6c6c6c;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: bold;
-    overflow: hidden;
-    white-space: nowrap;
-}
+  padding: 22px 35px 22px 30px;
+  border-bottom: 1px solid #6c6c6c;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap; }
+
+/* line 195, /Applications/MAMP/htdocs/time/css/style.scss */
 .hidden-menu .rowa:hover {
-    background-color: #646464;
-    text-shadow: 0 1px 2px black;
-    color: #fff;
-}
+  background-color: #646464;
+  text-shadow: 0 1px 2px black;
+  color: #fff; }
+
+/* line 200, /Applications/MAMP/htdocs/time/css/style.scss */
 .hidden-menu .rowa i {
-    width: 20px;
-    margin-right: 15px;
-    text-align: center;
-}
+  width: 20px;
+  margin-right: 15px;
+  text-align: center; }
+
+/* line 205, /Applications/MAMP/htdocs/time/css/style.scss */
 #mobile-nav {
-    background: #199b81;
-    color: #fff;
-    font-weight: bold;
-    display: none;
-}
-#mobile-nav .row{
-    padding: 20px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.31);
-    cursor: pointer;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+  background-color: #298fa2;
+  color: #fff;
+  font-weight: bold;
+  display: none; }
+
+/* line 212, /Applications/MAMP/htdocs/time/css/style.scss */
+#mobile-nav .row {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.31);
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+
+/* line 220, /Applications/MAMP/htdocs/time/css/style.scss */
 #mobile-nav .row i {
-    width: 20px;
-    text-align: center;
-    margin-right: 20px;
-}
+  width: 20px;
+  text-align: center;
+  margin-right: 20px; }
+
+/* line 225, /Applications/MAMP/htdocs/time/css/style.scss */
 #mobile-button {
-    display:none;
-}
+  display: none; }
+
+/* line 228, /Applications/MAMP/htdocs/time/css/style.scss */
 #content {
-    width: 100%;
-    height:100%;
-    position: relative;
-}
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+/* line 233, /Applications/MAMP/htdocs/time/css/style.scss */
 #content .skdslider {
-    padding-top: 50px;
-}
+  padding-top: 50px; }
+
+/* line 236, /Applications/MAMP/htdocs/time/css/style.scss */
 #content .header {
-    width: 100%;
-    text-align:center;
-    color:#fff;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.49);
-    position: absolute;
-    top: 25%;
-}
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.49);
+  position: absolute;
+  top: 30%;
+  z-index: 99999; }
+
+/* line 245, /Applications/MAMP/htdocs/time/css/style.scss */
 #content .header h4 {
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-}
+  margin: 0;
+  padding: 0;
+  font-size: 20px; }
+
+/* line 250, /Applications/MAMP/htdocs/time/css/style.scss */
 #content .header h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 80px;
-}
+  margin: 0;
+  padding: 0;
+  font-size: 60px; }
+
+/* line 255, /Applications/MAMP/htdocs/time/css/style.scss */
 #content .header p {
-    margin: 0;
-    padding: 0;
-    margin: 10px;
-    font-size: 20px;
-}
+  margin: 0;
+  padding: 0;
+  margin: 10px;
+  font-size: 20px; }
+
+/* line 261, /Applications/MAMP/htdocs/time/css/style.scss */
 #content .slider-shadow {
-    box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.5);
-    height: 300px;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-}
+  box-shadow: inset 0 5px 12px rgba(0, 0, 0, 0.5);
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-image: url(../res/slide3.jpg);
+  background-size: cover;
+  opacity: 0.7; }
+
+/* line 273, /Applications/MAMP/htdocs/time/css/style.scss */
 #content .want {
-/*    display: none;*/
-    width: 750px;
-    text-align: center;
-    position: relative;
-    background-size: 20px 20px;
-    background: rgba(0, 0, 0, 0.01);
-    margin: auto;
-    border: 1px solid rgba(128, 128, 128, 0.47);
-    border-radius:4px;
-    padding: 80px 60px 60px 60px;
-    margin-top: 7%;
-    box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.1);
-}
+  /*    display: none;*/
+  width: 750px;
+  text-align: center;
+  position: relative;
+  background-size: 20px 20px;
+  background: rgba(0, 0, 0, 0.01);
+  margin: auto;
+  border: 1px solid rgba(128, 128, 128, 0.47);
+  border-radius: 4px;
+  padding: 80px 60px 60px 60px;
+  margin-top: 7%;
+  box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.1); }
+
+/* line 287, /Applications/MAMP/htdocs/time/css/style.scss */
 #content .want:after {
-    content : "";
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../res/tile.png);
+  background-size: 27px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1; }
+
+/* line 300, /Applications/MAMP/htdocs/time/css/style.scss */
+#content .want h3 {
+  /* liveTime */
+  /*    font-family: 'digi';*/
+  font-family: 'Aldrich', sans-serif;
+  /*    font-family: "Lucida Console", Monaco, monospace*/
+  /*    font-family: Consolas, monaco, monospace;*/
+  font-size: 34px;
+  text-align: center;
+  font-weight: 900;
+  padding: 0 25px;
+  width: 250px;
+  margin: auto;
+  margin-bottom: 40px;
+  position: absolute;
+  background: #e3e3e3;
+  border-top: none;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 55px;
+  line-height: 60px;
+  color: #298fa2;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e3e3e3), color-stop(100%, #dbdbdb));
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  cursor: default;
+  overflow: hidden; }
+
+/* line 333, /Applications/MAMP/htdocs/time/css/style.scss */
+#content #liveDay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  top: -15px;
+  z-index: 2;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 10px;
+  color: #6d6d6d;
+  cursor: default; }
+
+/* line 347, /Applications/MAMP/htdocs/time/css/style.scss */
+#content .shadow-cover {
+  position: absolute;
+  top: -19px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #e3e3e3;
+  width: 300px;
+  height: 20px;
+  z-index: 1; }
+
+/* line 358, /Applications/MAMP/htdocs/time/css/style.scss */
+#content .tile {
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  width: 200px;
+  height: 140px;
+  line-height: 140px;
+  display: inline-block;
+  border-radius: 8px !important;
+  margin: 15px;
+  font-size: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(128, 128, 128, 0.47);
+  text-transform: uppercase;
+  font-size: 22px; }
+
+/* line 376, /Applications/MAMP/htdocs/time/css/style.scss */
+#content .disabled {
+  pointer-events: none; }
+
+/* line 379, /Applications/MAMP/htdocs/time/css/style.scss */
+#content .disabled:active {
+  top: 0; }
+
+/* line 382, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.29);
+  content: "";
+  z-index: 999999999999;
+  display: none; }
+
+/* line 393, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .popup {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 5;
+  background: #e3e3e3;
+  border-radius: 4px;
+  border: 1px solid #bfbfbf;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.49); }
+
+/* line 408, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .dismiss {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background: #000;
+  border: 2px solid #efefef;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  box-shadow: 0 0 4px black;
+  text-align: center;
+  cursor: pointer; }
+
+/* line 421, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .dismiss .fa {
+  color: #fff;
+  line-height: 30px; }
+
+/* line 425, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 300px;
+  height: 80px;
+  margin: auto;
+  text-align: center; }
+
+/* line 436, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .inner .success {
+  font-size: 20px;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold; }
+
+/* line 442, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .inner .margin-right {
+  margin-right: 30px; }
+
+/* line 445, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .inner .success .fa {
+  margin-right: 10px;
+  color: #298fa2; }
+
+/* line 449, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .inner .marg-right {
+  margin-right: 60px; }
+
+/* line 452, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .inner .text {
+  margin-top: 20px; }
+
+/* line 455, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .print {
+  height: 500px; }
+
+/* line 458, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .print-inner {
+  height: 400px; }
+
+/* line 461, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .print-inner .text {
+  margin-top: 0px; }
+
+/* line 464, /Applications/MAMP/htdocs/time/css/style.scss */
+.modal .print-cont {
+  overflow-y: scroll;
+  height: 323px;
+  margin-top: 30px;
+  border: 1px solid #9a9a9a; }
+
+/* line 470, /Applications/MAMP/htdocs/time/css/style.scss */
+#report-table {
+  width: 100%;
+  background: #fff; }
+
+/* line 474, /Applications/MAMP/htdocs/time/css/style.scss */
+#report-table:after {
+  position: absolute;
+  width: 100%;
+  height: 323px;
+  content: "";
+  left: 0;
+  bottom: 0;
+  z-index: 6;
+  /*    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);*/ }
+
+/* line 484, /Applications/MAMP/htdocs/time/css/style.scss */
+#report-table thead {
+  text-align: left;
+  background: #d6d6d6; }
+
+/* line 488, /Applications/MAMP/htdocs/time/css/style.scss */
+#report-table tbody {
+  text-align: left;
+  font-family: "Arial", "Helvetica", sans-serif; }
+
+/* line 492, /Applications/MAMP/htdocs/time/css/style.scss */
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #959595;
+  text-align: center;
+  padding: 10px;
+  color: #ccc;
+  font-size: 12px; }
+
+/* line 503, /Applications/MAMP/htdocs/time/css/style.scss */
+#login-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  padding-bottom: 20px; }
+
+/* line 515, /Applications/MAMP/htdocs/time/css/style.scss */
+.section {
+  padding: 20px;
+  color: #535353;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 30px; }
+
+/* line 522, /Applications/MAMP/htdocs/time/css/style.scss */
+.about ul {
+  padding-left: 25px; }
+
+/* line 525, /Applications/MAMP/htdocs/time/css/style.scss */
+.about .conclusion {
+  margin: 30px 0;
+  color: #298fa2; }
+
+/* line 529, /Applications/MAMP/htdocs/time/css/style.scss */
+.help {
+  padding-bottom: 70px; }
+
+/* line 535, /Applications/MAMP/htdocs/time/css/style.scss */
+.help .contact i {
+  margin-right: 30px;
+  color: #298fa2; }
+
+/* line 539, /Applications/MAMP/htdocs/time/css/style.scss */
+.help .contact a {
+  text-decoration: none;
+  color: inherit; }
+
+/* line 543, /Applications/MAMP/htdocs/time/css/style.scss */
+.help .contact a:hover {
+  text-decoration: underline;
+  color: #298fa2; }
+
+/* line 548, /Applications/MAMP/htdocs/time/css/style.scss */
+.profile {
+  padding-bottom: 80px; }
+
+/* line 551, /Applications/MAMP/htdocs/time/css/style.scss */
+.profile form {
+  padding: 0;
+  margin: 0;
+  display: block;
+  box-sizing: border-box; }
+
+/* line 557, /Applications/MAMP/htdocs/time/css/style.scss */
+.profile button {
+  float: right;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #298fa2;
+  width: auto;
+  color: #d3d3d3;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s ease; }
+  /* line 570, /Applications/MAMP/htdocs/time/css/style.scss */
+  .profile button:hover {
+    background-color: #1d6977; }
+
+/* line 574, /Applications/MAMP/htdocs/time/css/style.scss */
+.profile button:active {
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.24); }
+
+/* line 577, /Applications/MAMP/htdocs/time/css/style.scss */
+.profile .row {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-weight: bold; }
+
+/* line 583, /Applications/MAMP/htdocs/time/css/style.scss */
+.profile input {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  display: block;
+  border: 0;
+  padding: 5px 8px;
+  border-radius: 3px; }
+
+/* line 592, /Applications/MAMP/htdocs/time/css/style.scss */
+.profile .col30 {
+  padding-right: 20px; }
+
+/* line 599, /Applications/MAMP/htdocs/time/css/style.scss */
+#printout-container {
+  padding: 50px 80px;
+  width: 70%;
+  /*    background: red;*/
+  margin: auto;
+  min-width: 500px; }
+
+/* line 607, /Applications/MAMP/htdocs/time/css/style.scss */
+#printout-container .row {
+  margin-bottom: 0px; }
+
+/* line 610, /Applications/MAMP/htdocs/time/css/style.scss */
+#printout-container .title {
+  text-align: center;
+  margin-bottom: 40px; }
+
+/* line 614, /Applications/MAMP/htdocs/time/css/style.scss */
+#printout-container .name-container {
+  background: red; }
+
+/* line 618, /Applications/MAMP/htdocs/time/css/style.scss */
+#printout-container .signature1 {
+  width: 100%;
+  height: 1px;
+  background: black; }
+
+/* line 623, /Applications/MAMP/htdocs/time/css/style.scss */
+#printout-container .echo-text {
+  margin-left: 30px; }
+
+/* line 626, /Applications/MAMP/htdocs/time/css/style.scss */
+#printout-container table {
+  width: 100%;
+  margin-top: 20px; }
+
+/* line 629, /Applications/MAMP/htdocs/time/css/style.scss */
+#printout-container td {
+  text-align: center;
+  padding: 6px; }
+
+/* line 633, /Applications/MAMP/htdocs/time/css/style.scss */
+#printout-container table thead td {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px; }
+
+/* line 638, /Applications/MAMP/htdocs/time/css/style.scss */
+#printout-container .total {
+  text-decoration: underline; }
+
+/* line 661, /Applications/MAMP/htdocs/time/css/style.scss */
+.col {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: -4px; }
+
+/* line 666, /Applications/MAMP/htdocs/time/css/style.scss */
+.col30 {
+  width: 25%; }
+
+/* line 669, /Applications/MAMP/htdocs/time/css/style.scss */
+.col70 {
+  width: 75%; }
+
+/* line 672, /Applications/MAMP/htdocs/time/css/style.scss */
+.textright {
+  text-align: right;
+  /*    background: red;*/ }
+
+/* line 676, /Applications/MAMP/htdocs/time/css/style.scss */
+.inline {
+  display: inline-block; }
+
+/* line 679, /Applications/MAMP/htdocs/time/css/style.scss */
+.clickme {
+  cursor: pointer; }
+
+/* line 682, /Applications/MAMP/htdocs/time/css/style.scss */
+.hidden {
+  display: none; }
+
+/* line 685, /Applications/MAMP/htdocs/time/css/style.scss */
+.noregular {
+  display: none; }
+
+/* line 689, /Applications/MAMP/htdocs/time/css/style.scss */
+.left {
+  float: left; }
+
+/* line 692, /Applications/MAMP/htdocs/time/css/style.scss */
+.right {
+  float: right; }
+
+/* line 695, /Applications/MAMP/htdocs/time/css/style.scss */
+.center {
+  text-align: center; }
+
+/* line 698, /Applications/MAMP/htdocs/time/css/style.scss */
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 706, /Applications/MAMP/htdocs/time/css/style.scss */
+.blue-bg {
+  background: blue; }
+
+/* line 709, /Applications/MAMP/htdocs/time/css/style.scss */
+.tr-green {
+  background: #dff0df; }
+
+/* line 712, /Applications/MAMP/htdocs/time/css/style.scss */
+.tr-red {
+  background: #f0e1df; }
+
+/* line 715, /Applications/MAMP/htdocs/time/css/style.scss */
+.tr-blue {
+  background: #e3e5ef; }
+
+/* line 718, /Applications/MAMP/htdocs/time/css/style.scss */
+.login-bg {
+  background: #4e7189;
+  background: -moz-linear-gradient(top, #4e7189 0%, #7b9f98 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4e7189), color-stop(100%, #7b9f98));
+  background: -webkit-linear-gradient(top, #4e7189 0%, #7b9f98 100%);
+  background: -o-linear-gradient(top, #4e7189 0%, #7b9f98 100%);
+  background: -ms-linear-gradient(top, #4e7189 0%, #7b9f98 100%);
+  background: linear-gradient(to bottom, #4e7189 0%, #7b9f98 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e7189', endColorstr='#7b9f98',GradientType=0 ); }
+
+/* line 729, /Applications/MAMP/htdocs/time/css/style.scss */
+.home-bg {
+  background-color: #e3e3e3;
+  background: #e3e3e3;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #e3e3e3 62%, #b7b7b7 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(62%, #e3e3e3), color-stop(100%, #b7b7b7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e3e3e3 62%, #b7b7b7 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e3e3e3 62%, #b7b7b7 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e3e3e3 62%, #b7b7b7 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #e3e3e3 62%, #b7b7b7 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#b7b7b7',GradientType=0 );
+  /* IE6-9 */
+  background-attachment: fixed; }
+
+/*924*/
+@media screen and (max-device-width: 750px), screen and (max-width: 750px) {
+  /* line 755, /Applications/MAMP/htdocs/time/css/style.scss */
+  .skdslider {
+    width: 100% !important;
+    height: 200px !important; }
+
+  /* line 759, /Applications/MAMP/htdocs/time/css/style.scss */
+  #content .slider-shadow {
+    width: 100%;
+    height: 200px; }
+
+  /* line 763, /Applications/MAMP/htdocs/time/css/style.scss */
+  html {
+    min-width: 100%; }
+
+  /* line 766, /Applications/MAMP/htdocs/time/css/style.scss */
+  #login {
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    top: 30px; }
+
+  /* line 772, /Applications/MAMP/htdocs/time/css/style.scss */
+  #login a {
+    color: #454545;
+    line-height: 50px; }
+
+  /* line 776, /Applications/MAMP/htdocs/time/css/style.scss */
+  #login .icon {
+    display: none; }
+
+  /* line 779, /Applications/MAMP/htdocs/time/css/style.scss */
+  #login:after {
+    display: none; }
+
+  /* line 782, /Applications/MAMP/htdocs/time/css/style.scss */
+  #login .fa-input {
+    top: 10px; }
+
+  /* line 785, /Applications/MAMP/htdocs/time/css/style.scss */
+  #login button {
+    margin-left: -5px; }
+
+  /* line 788, /Applications/MAMP/htdocs/time/css/style.scss */
+  #content .header {
+    top: 4%; }
+
+  /* line 791, /Applications/MAMP/htdocs/time/css/style.scss */
+  #content .header p {
+    padding: 0 30px; }
+
+  /* line 794, /Applications/MAMP/htdocs/time/css/style.scss */
+  #content .want {
+    width: 100%;
+    padding: 0;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0; }
+
+  /* line 803, /Applications/MAMP/htdocs/time/css/style.scss */
+  #content .tile {
+    margin: 0;
+    margin-top: 20px;
+    width: 80%;
+    height: 80px;
+    line-height: 80px; }
+
+  /* line 810, /Applications/MAMP/htdocs/time/css/style.scss */
+  #content .header h1 {
+    font-size: 35px; }
+
+  /* line 813, /Applications/MAMP/htdocs/time/css/style.scss */
+  #content .skdslider {
+    padding-top: 0; }
+
+  /* line 816, /Applications/MAMP/htdocs/time/css/style.scss */
+  #nav {
+    display: none; }
+
+  /* line 819, /Applications/MAMP/htdocs/time/css/style.scss */
+  #mobile-button {
     display: block;
     position: absolute;
     top: 0;
-    left: 0;
-    background-image: url(../res/tile.png); 
-    background-size: 27px;
-    width: 100%;
-    height: 100%;
-    opacity : 0.2;
-    z-index: -1;
-}
-#content .want h3 {          /* liveTime */
-/*    font-family: 'digi';*/
-    font-family: 'Aldrich', sans-serif;
-/*    font-family: "Lucida Console", Monaco, monospace*/
-/*    font-family: Consolas, monaco, monospace;*/
-    font-size: 34px;
-    text-align: center;
-    font-weight: 900;
-    padding: 0 25px;
-    width: 250px;
-    margin: auto;
-    margin-bottom: 40px;
-    position: absolute;    
-    background: #e3e3e3;
-    border-top: none;
-    border-bottom-left-radius: 4px !important;
-    border-bottom-right-radius: 4px !important;
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
-    top: -1px;
-    left: 0;
     right: 0;
-    height: 55px;
-    line-height: 60px;
-    color: #9cbcb2;
-    text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
-    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e3e3e3), color-stop(100%, #dbdbdb));
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-    pointer-events: none;
-    cursor: default;
-    overflow: hidden;
-}
-#content #liveDay {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 300px;
-    top: -15px;
-    z-index: 2;
-    text-transform: uppercase;
-    font-weight: lighter;
-    font-size: 10px;
-    color: #6d6d6d;
-    cursor: default;
-}
-#content .shadow-cover {
-    position: absolute;
-    top: -19px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: #e3e3e3;
-    width: 300px;
-    height: 20px;
-    z-index: 1;
-}
-#content .tile {
-    margin:0;
-    padding:0;
-    font-weight: 100;
-    width: 200px;
-    height: 140px;
-    line-height: 140px;
-    display: inline-block;
-    border-radius: 8px!important;
-    margin: 15px;
-    font-size: 24px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(128, 128, 128, 0.47);
-    text-transform: uppercase;
-    font-size: 22px;
-}
-#content .disabled {
-    pointer-events: none;
-}
-#content .disabled:active {
-    top:0;
-}
-.modal {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.29);
-    content: "";
-    z-index: 4;
-    display: none;
-}
-.modal .popup {
-    width:400px;
-    height: 200px;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    z-index: 5;
-    background: #e3e3e3;
-    border-radius: 4px;
-    border: 1px solid #bfbfbf;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.49);
-}
-.modal .dismiss {
-    position: absolute;
-    right:-10px;
-    top:-10px;
-    background: #000;
-    border: 2px solid #efefef;
-    width: 30px;
-    height: 30px;
-    border-radius: 100px;
-    box-shadow: 0 0 4px black;
-    text-align: center;
-    cursor: pointer;
-}
-.modal .dismiss .fa {
-    color:#fff;
-    line-height: 30px;
-}
-.modal .inner {
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 300px;
-    height: 80px;
-    margin: auto;
-    text-align: center;
-}
-.modal .inner .success {
-    font-size: 20px;
-    display:inline-block;
-    font-size: 24px;
-    font-weight: bold;
-}
-.modal .inner .margin-right {
-    margin-right: 30px;
-}
-.modal .inner .success .fa {
-    margin-right: 10px;
-    color:#1ba085;
-}
-.modal .inner .text {
-    margin-top: 20px;
-}
-.modal .print {
-    height: 500px;
-}
-.modal .print-inner {
-    height: 400px;
-}
-.modal .print-inner .text {
-    margin-top: 0px;
-}
-.modal .print-cont {
-    overflow-y: scroll;
-    height: 323px;
-    margin-top: 30px;
-    border: 1px solid #9a9a9a
-}
-#report-table {
-    width: 100%;
-    background: #fff;
-}
-#report-table:after {
-    position: absolute;
-    width: 100%;
-    height: 323px;
-    content: "";
-    left: 0;
-    bottom: 0;
-    z-index: 6;
-/*    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);*/
-}
-#report-table thead{
-    text-align: left;
-    background: #d6d6d6;
-}
-#report-table tbody{
-    text-align: left;
-    font-family: "Arial", "Helvetica", sans-serif;
-}
-#footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #959595;
-    text-align: center;
-    padding: 10px;
-    color: #ccc;
-    font-size: 12px;
-}
-
-#login-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 80%;
-    text-align: center;
+    z-index: 9999999999;
+    margin: 10px;
     color: #fff;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.49);
     font-size: 12px;
-    padding-bottom: 20px;
-}
-.section {
-    padding: 20px;
-    color: #535353;
-}
-.section .about {
-}
-.section .help strong {
-    color: red !important;
-}
+    opacity: 0.9; }
 
-
-
-
-
-#printout-container {
-    padding: 50px 80px;
-    width: 70%;
-/*    background: red;*/
+  /* line 831, /Applications/MAMP/htdocs/time/css/style.scss */
+  .mobile-title {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.49);
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: -90px;
+    right: 0;
+    left: 0;
     margin: auto;
-    min-width: 500px;
-    
-}
-#printout-container .row {
-    margin-bottom: 0px;
-}
-#printout-container .title {
-    text-align: center;
-    margin-bottom: 70px;
-}
-#printout-container .name-container {
-    
-    background: red;
-}
-#printout-container .signature1 {
-    width: 100%;;
-    height: 1px;
-    background: black;
-}
-#printout-container .echo-text {
-    margin-left: 30px;
-}
-#printout-container table {
-    width: 100%;
-    margin-top: 20px;
-}
-#printout-container table thead{
-    text-align: center;
-    font-weight: bold;
-}
+    font-size: 40px; }
 
+  /* line 843, /Applications/MAMP/htdocs/time/css/style.scss */
+  .noregular {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px; }
 
+  /* line 849, /Applications/MAMP/htdocs/time/css/style.scss */
+  .modal .popup {
+    width: 90%;
+    border-radius: 0; }
 
+  /* line 853, /Applications/MAMP/htdocs/time/css/style.scss */
+  .modal .dismiss {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
+    box-shadow: none;
+    background: none; }
 
+  /* line 864, /Applications/MAMP/htdocs/time/css/style.scss */
+  .modal .dismiss .fa {
+    color: #000;
+    line-height: 50px; }
 
+  /* line 868, /Applications/MAMP/htdocs/time/css/style.scss */
+  #footer {
+    display: none; }
 
+  /* line 871, /Applications/MAMP/htdocs/time/css/style.scss */
+  .home-bg {
+    background: #e3e3e3; }
 
+  /* line 874, /Applications/MAMP/htdocs/time/css/style.scss */
+  #clock_base {
+    display: none; }
 
+  /* line 877, /Applications/MAMP/htdocs/time/css/style.scss */
+  .bad-login {
+    top: -8px !important; }
 
+  /* line 880, /Applications/MAMP/htdocs/time/css/style.scss */
+  .nomobile {
+    display: none; }
 
+  /* line 883, /Applications/MAMP/htdocs/time/css/style.scss */
+  .profile .col {
+    display: block;
+    width: 100%; }
 
+  /* line 887, /Applications/MAMP/htdocs/time/css/style.scss */
+  .profile .row {
+    padding: 10px 0; }
 
+  /* line 890, /Applications/MAMP/htdocs/time/css/style.scss */
+  .help {
+    padding-bottom: 10px; }
 
+  /* line 893, /Applications/MAMP/htdocs/time/css/style.scss */
+  .help .contact {
+    font-size: 20px; }
 
+  /* line 896, /Applications/MAMP/htdocs/time/css/style.scss */
+  .help .contact .fa {
+    display: none; }
 
+  /* line 899, /Applications/MAMP/htdocs/time/css/style.scss */
+  .help .contact a {
+    color: #298fa2; }
 
+  /* line 902, /Applications/MAMP/htdocs/time/css/style.scss */
+  .profile {
+    padding-bottom: 50px; }
 
-
-
-
-
-.textright {
-    text-align: right;
-/*    background: red;*/
-}
-.inline {
-    display:inline-block;
-}
-.clickme {
-    cursor: pointer;
-}
-.hidden {
-    display: none;
-}
-.noregular {
-    display: none;
-}
-.left {
-    float:left;
-}
-.right {
-    float:right;
-}
-.noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.blue-bg {
-    background: blue;
-}
-.tr-green {
-    background:#dff0df;
-}
-.tr-red {
-    background:#f0e1df;
-}
-.tr-blue {
-    background:#e3e5ef;
-}
-.login-bg {
-background: rgb(78,113,137);
-background: -moz-linear-gradient(top,  rgba(78,113,137,1) 0%, rgba(123,159,152,1) 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(78,113,137,1)), color-stop(100%,rgba(123,159,152,1)));
-background: -webkit-linear-gradient(top,  rgba(78,113,137,1) 0%,rgba(123,159,152,1) 100%);
-background: -o-linear-gradient(top,  rgba(78,113,137,1) 0%,rgba(123,159,152,1) 100%);
-background: -ms-linear-gradient(top,  rgba(78,113,137,1) 0%,rgba(123,159,152,1) 100%);
-background: linear-gradient(to bottom,  rgba(78,113,137,1) 0%,rgba(123,159,152,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e7189', endColorstr='#7b9f98',GradientType=0 );
-
-}
-.home-bg {
-    background: #e3e3e3;
-    background: rgb(227,227,227); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(227,227,227,1) 62%, rgba(183,183,183,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(62%,rgba(227,227,227,1)), color-stop(100%,rgba(183,183,183,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(227,227,227,1) 62%,rgba(183,183,183,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(227,227,227,1) 62%,rgba(183,183,183,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(227,227,227,1) 62%,rgba(183,183,183,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(227,227,227,1) 62%,rgba(183,183,183,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#b7b7b7',GradientType=0 ); /* IE6-9 */
-
-    
-}
-
-
-
-
-/*924*/
-
-@media screen and (max-device-width: 750px), screen and (max-width: 750px) {
-    .skdslider {
-        width: 100% !important;
-        height: 200px !important;
-    }
-    #content .slider-shadow {
-        width: 100%;
-        height: 200px;
-    }
-    html {
-        min-width: 100%;
-    }
-    #login { 
-        border-radius: 0;
-        background: none;
-        box-shadow: none;
-        top: 30px;
-    }
-    #login a {
-        color: #454545;
-        line-height: 50px;
-    }
-    #login .icon { 
-        display: none;
-    }
-    #login:after {
-        display: none;
-    }
-    #login .fa-input {
-        top:10px;
-    }
-    #login button {
-        margin-left: -5px;
-    }
-    #content .want {
-        width: 100%;
-        padding: 0;
-        padding-top: 60px;
-        padding-bottom: 50px;
-        border-left: 0;
-        border-right: 0;
-        border-radius: 0;
-    }
-    #content .tile {
-        margin: 0;
-        margin-top: 20px;
-        width: 80%;
-        height: 100px;
-        line-height: 100px;
-    }
-    #content .header h1 {
-        font-size: 35px;
-    }
-    #content .skdslider {
-        padding-top: 0;
-    }
-    #nav {
-        display: none;
-    }
-    #mobile-button {
-        display:block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 9999999999;
-        margin: 10px;
-        color: #fff;
-        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.49);
-        font-size: 12px;
-        opacity: .9;
-    }
-    .mobile-title {
-        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.49);
-        color: #fff;
-        text-align: center;
-        position: absolute;
-        top: -90px;
-        right: 0;
-        left: 0;
-        margin: auto;
-        font-size: 40px;
-    }
-    
-    .noregular {
-        display: block;
-        margin: 0;
-        padding: 0;
-        margin-top: 30px;
-    }
-    .modal .popup {
-        width: 90%;
-        border-radius: 0;
-    }
-    .modal .dismiss {
-        position: absolute;
-        right:0;
-        top:0;
-        border: none;
-        width: 50px;
-        height: 50px;
-        border-radius: 0;
-        box-shadow: none;
-        background: none;
-    }
-    .modal .dismiss .fa {
-        color:#000;
-        line-height: 50px;
-    }
-    #footer {
-        display: none;
-    }
-    .home-bg {
-        background: #e3e3e3;
-    }
-    #clock_base {
-        display: none;
-    }
-    .bad-login {
-        
-        top: -8px !important;
-    }
-}
-
-
-
+  /* line 905, /Applications/MAMP/htdocs/time/css/style.scss */
+  .about {
+    padding-bottom: 10px; }
+ }
 
 @media screen and (max-device-height: 300px), screen and (max-height: 300px) {
-    #login-footer {
-        display: none;
-    }
-}
+  /* line 914, /Applications/MAMP/htdocs/time/css/style.scss */
+  #login-footer {
+    display: none; }
+ }
 
+@media screen and (max-device-height: 768px), screen and (max-height: 768px) {
+  /* line 921, /Applications/MAMP/htdocs/time/css/style.scss */
+  #footer {
+    display: none; }
 
-@media screen and (max-device-height: 820px), screen and (max-height: 820px) {
-    #footer {
-        display: none;
-    }
-    .home-bg {
-        background: #e3e3e3;
-    }
-}
+  /* line 924, /Applications/MAMP/htdocs/time/css/style.scss */
+  .home-bg {
+    background: #e3e3e3; }
+ }
+
+/*# sourceMappingURL=style.css.map */
